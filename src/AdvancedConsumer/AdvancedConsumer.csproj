@@ -6,7 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Castle.Windsor" Version="5.0.1" />
     <PackageReference Include="MassTransit" Version="6.2.5" />
+    <PackageReference Include="MassTransit.CastleWindsor" Version="6.2.5" />
+    <PackageReference Include="MassTransit.Log4Net" Version="5.5.6" />
     <PackageReference Include="MassTransit.RabbitMQ" Version="6.2.5" />
   </ItemGroup>
 

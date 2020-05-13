@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.1082
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{433922B0-04C3-4C22-87F0-CF7AA8F15845}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{433922B0-04C3-4C22-87F0-CF7AA8F15845}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Publisher", "Publisher\Publisher.csproj", "{CDA76FF7-B9D1-405F-8213-55C2BBD3BA7B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Publisher", "Publisher\Publisher.csproj", "{CDA76FF7-B9D1-405F-8213-55C2BBD3BA7B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consumer", "Consumer\Consumer.csproj", "{8B521DF7-C084-4AEA-89C1-3E0600746D6D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumer", "Consumer\Consumer.csproj", "{8B521DF7-C084-4AEA-89C1-3E0600746D6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedConsumer", "AdvancedConsumer\AdvancedConsumer.csproj", "{77FE9CDE-C166-4C0B-A1EB-596D03E2A9A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{8B521DF7-C084-4AEA-89C1-3E0600746D6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B521DF7-C084-4AEA-89C1-3E0600746D6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B521DF7-C084-4AEA-89C1-3E0600746D6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77FE9CDE-C166-4C0B-A1EB-596D03E2A9A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77FE9CDE-C166-4C0B-A1EB-596D03E2A9A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77FE9CDE-C166-4C0B-A1EB-596D03E2A9A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77FE9CDE-C166-4C0B-A1EB-596D03E2A9A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
