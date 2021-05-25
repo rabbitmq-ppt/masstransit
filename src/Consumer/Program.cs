@@ -16,28 +16,24 @@ namespace Consumer
 
                 config.ReceiveEndpoint(RabbitMqConstants.PatientCreatedQueue, conf => 
                 {
-                    
-                    conf.UseMessageRetry(r => 
-                    {                        
-                        r.Immediate(3);
-                    });
-
-                    conf.UseInMemoryOutbox();
+                    //conf.UseMessageRetry(r =>
+                    //{
+                    //    r.Immediate(3);
+                    //});
 
                     conf.Consumer(() => new PatientCreatedEventConsumer());
                 });
 
-                config.ReceiveEndpoint(RabbitMqConstants.SecondQueue, conf =>
-                {
+                //config.ReceiveEndpoint(RabbitMqConstants.SecondQueue, conf =>
+                //{
 
-                    conf.UseMessageRetry(r =>
-                    {
-                        r.Immediate(3);
-                    });
+                //    conf.UseMessageRetry(r =>
+                //    {
+                //        r.Immediate(3);
+                //    });
 
-                    conf.UseInMemoryOutbox();
-                    conf.Consumer(() => new SecondConsumer());
-                });
+                //    conf.Consumer(() => new SecondConsumer());
+                //});
             });
 
             busControl.Start();

@@ -7,7 +7,7 @@ using Common;
 using GreenPipes;
 using MassTransit;
 
-namespace AdvancedConsumer.IoC
+namespace AdvancedConsumer.DI
 {
     internal class ConsumerInstaller : IWindsorInstaller
     {

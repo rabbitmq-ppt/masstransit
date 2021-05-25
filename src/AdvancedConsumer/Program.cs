@@ -1,4 +1,4 @@
-﻿using AdvancedConsumer.IoC;
+﻿using AdvancedConsumer.DI;
 using Castle.Windsor;
 using GreenPipes;
 using MassTransit;

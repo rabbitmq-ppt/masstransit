@@ -2,12 +2,13 @@
 using Common.Events;
 using MassTransit;
 using System;
+using System.Threading.Tasks;
 
 namespace Publisher
 {
-    class Program
+    static class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             Console.WriteLine("[Producer] Starting");
             var busControl = Bus.Factory.CreateUsingRabbitMq(conf =>
@@ -17,7 +18,7 @@ namespace Publisher
             
             busControl.Start();            
 
-            busControl.Publish(
+            await busControl.Publish(
                 new PatientCreatedEvent
                 {
                     Id = 1,
@@ -25,7 +26,8 @@ namespace Publisher
                 }, 
                 context => 
                 {
-                    context.CorrelationId = Guid.NewGuid();                    
+                    context.CorrelationId = Guid.NewGuid();
+                    context.TimeToLive = TimeSpan.FromSeconds(15);
                 });
 
             
