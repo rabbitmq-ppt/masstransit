@@ -15,26 +15,23 @@ namespace Publisher
             {
                 conf.Host(RabbitMqConstants.HostName);
             });
-            
-            busControl.Start();            
+
+            await busControl.StartAsync();
 
             await busControl.Publish(
                 new PatientCreatedEvent
                 {
                     Id = 1,
-                    Name = "Piotr"                    
-                }, 
-                context => 
+                    Name = "Piotr"
+                },
+                context =>
                 {
-                    context.CorrelationId = Guid.NewGuid();
-                    context.TimeToLive = TimeSpan.FromSeconds(15);
+                    context.CorrelationId = Guid.NewGuid();                    
                 });
-
-            
 
             Console.WriteLine($"[Producer] Wysłał wiadomość");
             Console.ReadLine();
-            busControl.Stop();
+            await busControl.StopAsync();
         }
     }
 }

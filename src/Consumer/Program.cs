@@ -3,12 +3,13 @@ using Consumer.Consumers;
 using GreenPipes;
 using MassTransit;
 using System;
+using System.Threading.Tasks;
 
 namespace Consumer
 {
-    class Program
+    static class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             var busControl = Bus.Factory.CreateUsingRabbitMq(config => 
             {
@@ -36,10 +37,10 @@ namespace Consumer
                 //});
             });
 
-            busControl.Start();
+            await busControl.StartAsync();
             Console.WriteLine("[Consumer] Consuming events. Any key to stop");
             Console.ReadLine();
-            busControl.Stop();
+            await busControl.StopAsync();
         }
     }
 }
